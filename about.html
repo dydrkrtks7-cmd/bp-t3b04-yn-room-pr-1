@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상수 하이퍼블릭 위치 정보 — 상수동 인디 가이드를 위한 위치 및 방문 조건 해부</title>
+    <meta name="description" content="상수 하이퍼블릭의 정확한 위치, 교통편, 주변 환경, 그리고 방문 전 반드시 확인해야 할 조건을 상세히 안내합니다. 이곳만의 특별한 분위기를 경험하기 위한 필수 정보를 확인하세요.">
+    <meta name="keywords" content="상수 하이퍼블릭, 상수동 카페, 하이퍼블릭 상수, 상수 하이퍼블릭 위치, 상수역 카페, 서울 인디 카페, 상수동 맛집">
+    <link rel="canonical" href="https://sangsu-hyperpublic-note.gongdeok-club.xyz/">
+    <meta property="og:title" content="상수 하이퍼블릭 위치 정보 — 상수동 인디 가이드를 위한 위치 및 방문 조건 해부">
+    <meta property="og:description" content="상수 하이퍼블릭의 정확한 위치와 방문 조건, 주변 환경까지 상세히 안내합니다.">
+    <meta property="og:url" content="https://sangsu-hyperpublic-note.gongdeok-club.xyz/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --font-serif: 'Noto Serif KR', serif;
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'Cormorant Garamond', serif;
+            --color-bg: #f4f1eb;
+            --color-text: #1a1a1a;
+            --color-text-light: #666;
+            --color-accent: #8b0000;
+            --color-card-bg: #ffffff;
+            --color-card-border: #e0e0e0;
+            --space-unit: 8px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.7;
+            padding: calc(var(--space-unit) * 5);
+            -webkit-font-smoothing: antialiased;
+        }
+        .r-foot-bb5a-texture {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        .m-card-uoqh {
+            background: var(--color-card-bg);
+            border: 1px solid var(--color-card-border);
+            padding: calc(var(--space-unit) * 4);
+            margin-bottom: calc(var(--space-unit) * 4);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .q-body-n1 {
+            font-family: var(--font-body);
+            font-size: 1.125rem;
+            line-height: 1.8;
+        }
+        nav {
+            margin-bottom: calc(var(--space-unit) * 6);
+            border-bottom: 1px solid var(--color-text-light);
+            padding-bottom: var(--space-unit);
+        }
+        nav a {
+            color: var(--color-text);
+            text-decoration: none;
+            margin-right: calc(var(--space-unit) * 2);
+            font-family: var(--font-serif);
+            font-weight: 400;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        nav a:hover {
+            color: var(--color-accent);
+        }
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: calc(var(--space-unit) * 2);
+            color: var(--color-text);
+        }
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: calc(var(--space-unit) * 3); }
+        h2 { font-size: 1.75rem; border-bottom: 2px solid var(--color-text); padding-bottom: var(--space-unit); display: inline-block; margin-bottom: calc(var(--space-unit) * 3); }
+        h3 { font-size: 1.25rem; font-family: var(--font-serif); margin-bottom: var(--space-unit); color: var(--color-accent); }
+        p { margin-bottom: calc(var(--space-unit) * 2); }
+        .tag {
+            display: inline-block;
+            font-family: var(--font-serif);
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: 1px solid var(--color-text);
+            padding: 2px 8px;
+            margin-bottom: var(--space-unit);
+        }
+        .faq-item {
+            margin-bottom: calc(var(--space-unit) * 3);
+            border-bottom: 1px solid var(--color-card-border);
+            padding-bottom: calc(var(--space-unit) * 2);
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: var(--space-unit);
+            cursor: pointer;
+        }
+        .faq-answer {
+            font-size: 1rem;
+            color: var(--color-text-light);
+        }
+        .highlight {
+            color: var(--color-accent);
+            font-weight: 700;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: var(--space-unit) * 3;
+            }
+            .m-card-uoqh {
+                padding: calc(var(--space-unit) * 3);
+            }
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                gap: var(--space-unit);
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+            nav a {
+                margin-right: 0;
+                padding: 4px 8px;
+                border: 1px solid var(--color-card-border);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="r-foot-bb5a-texture"></div>
+
+    <nav>
+        <a href="#">홈</a>
+        <a href="#">메뉴</a>
+        <a href="#">정보</a>
+        <a href="#">갤러리</a>
+    </nav>
+
+    <main>
+        <div class="m-card-uoqh">
+            <div class="tag">위치</div>
+            <h1>상수 하이퍼블릭<br><em style="font-family: var(--font-body); font-style: italic; font-weight: 400; font-size: 0.8em;">Coordinates for the Insatiable</em></h1>
+            <p>여기 오려면 각오해. 일반적인 카페 코스가 아니다. 이 좌표는 <span class="highlight">상수동 한복판, 그림자와 빛이 교차하는 곳</span>에 찍혀 있다. 대로변의 화려함은 버려라. 진짜는 골목 안쪽에 있다.</p>
+        </div>
+
+        <div class="m-card-uoqh q-body-n1">
+            <h2>정확한 주소 & 접근</h2>
+            <p><strong>주소:</strong> 서울특별시 마포구 상수동 (상세 번호는 생략. 눈으로 찾을 능력이 없다면 여기에 올 자격도 없다.)</p>
+            <p><strong>지하철:</strong> 6호선 <span class="highlight">상수역</span> 3번 출구에서 도보 7분. 5분 안에 오면 넌 아직 상수를 모른다. 느긋하게 걸어라. 이 동네의 리듬을 먼저 익혀라.</p>
+            <p><strong>버스:</strong> 마을버스는 포기. 걸어오셈. 그게 이 건물의 입구를 찾는 유일한 힌트다.</p>
+        </div>
+
+        <div class="m-card-uoqh">
+            <h2>주변 시그널</h2>
+            <p>상수 하이퍼블릭은 고립된 섬이 아니다. <span class="highlight">독립 서점, 실험적인 갤러리, 오래된 단골 식당들</span>이 그물처럼 얽힌 네트워크의 중심점에 서 있다. 주변을 탐험하라. 하지만 시간에 쫓기지 마라. 이곳의 시간은 다르게 흐른다.</p>
+            <p><strong>주변 주의사항:</strong> 차량 접근은 최대한 피할 것. 좁은 골목의 주차전쟁은 당신의 분위기를 순식간에 망친다. 도보가 정답이다.</p>
+        </div>
+
+        <div class="m-card-uoqh">
+            <h2>방문 조건 (반드시 확인)</h2>
+            <p>여기는 감히 말하건대, <span class="highlight">무작정 찾아오면 곤란한 장소</span>다. 아래 조건을 반드시 숙지하라.</p>
+            <ul style="margin-left: 20px; margin-bottom: calc(var(--space-unit) * 2);">
+                <li><strong>예약:</strong> 사전 예약제. 워크인은 환영하지만, 확실한 좌석을 원한다면 예약하라. 전화 한 통이 당신의 오후를 구원할 것이다.</li>
+                <li><strong>영업시간:</strong> 오후 1시부터 자정까지. 점심 시간 전에 오면 문 앞에서 서성이는 신세가 된다.</li>
+                <li><strong>복장:</strong> 공식적인 드레스 코드는 없다. 하지만 당신의 <span class="highlight">태도</span>가 가장 중요한 코드다.</li>
+                <li><strong>대화:</strong> 여기서는 조용히 마시는 것을 권장한다. 당신의 생각을 정리하기에 이보다 완벽한 배경은 없다.</li>
+            </ul>
+        </div>
+
+        <div class="m-card-uoqh">
+            <h2>FAQ — 현실적인 답변</h2>
+            <div class="faq-item">
+                <div class="faq-question">Q. 주차가 가능한가요?</div>
+                <div class="faq-answer">A. 가능하다. 하지만 미리 알려달라. 뒷골목에 잠시 차를 세울 수 있는 자리를 잡아줄 수는 있다. 다만, 그게你的 편안한 마음 상태를 보장하지는 않는다. 대중교통을 추천한다.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Q. 사진 촬영이 가능한가요?</div>
+                <div class="faq-answer">A. 가능하다. 다만, 다른 손님을 배려하라. 플래시는 절대 금지. 당신의 순간을 남기는 건 자유지만, 다른 이의 고요함을 빼앗는 건 예의가 아니다.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Q. 어떤 메뉴를 시켜야 하나요?</div>
+                <div class="faq-answer">A. 메뉴판을 봐라. 그건 단순한 목록이 아니다. 오늘의 기분, 지금의 생각에 가장 가까운 단어를 골라라. 특별한 추천은 없다. 너의 선택이 곧 너의 취향이니까.</div>
+            </div>
+        </div>
+
+        <footer style="margin-top: calc(var(--space-unit) * 8); padding-top: var(--space-unit) * 3; border-top: 1px solid var(--color-text-light); text-align: center; font-size: 0.8rem; color: var(--color-text-light); font-family: var(--font-serif);">
+            <p>© 2024 상수 하이퍼블릭 노트. 이 정보는 당신의 탐험을 위한 안내서일 뿐, 정답은 아니다.</p>
+        </footer>
+    </main>
+</body>
+</html>

@@ -1,201 +1,577 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>영화 미학 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Noto+Sans+KR:wght@400;900&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: #0d0d0f;
-      color: #ebebeb;
-      font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif;
-      line-height: 1.6;
-      padding: 32px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상수 하이퍼블릭 위치 정보 — 상수동 인디 가이드를 위한 위치 및 방문 조건 해부</title>
+    <meta name="description" content="상수 하이퍼블릭의 정확한 위치, 교통편, 주변 환경, 그리고 방문 전 반드시 확인해야 할 조건을 상세히 안내합니다. 이곳만의 특별한 분위기를 경험하기 위한 필수 정보를 확인하세요.">
+    <meta name="keywords" content="상수 하이퍼블릭, 상수동 카페, 하이퍼블릭 상수, 상수 하이퍼블릭 위치, 상수역 카페, 서울 인디 카페, 상수동 맛집">
+    <link rel="canonical" href="https://sangsu-hyperpublic-note.gongdeok-club.xyz/">
+    <meta property="og:title" content="상수 하이퍼블릭 위치 정보 — 상수동 인디 가이드를 위한 위치 및 방문 조건 해부">
+    <meta property="og:description" content="상수 하이퍼블릭의 정확한 위치와 방문 조건, 주변 환경까지 상세히 안내합니다.">
+    <meta property="og:url" content="https://sangsu-hyperpublic-note.gongdeok-club.xyz/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="상수 하이퍼블릭 위치 정보">
+    <meta name="twitter:description" content="상수 하이퍼블릭의 위치와 방문 전 알아야 할 모든 것.">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-charcoal-silver">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Serif+KR:wght@400;700&display=swap');
+        
+        :root {
+            --rca-primary: #1a1a22;
+            --rca-secondary: #f4f4f6;
+            --rca-accent: #8a8aaa;
+            --rca-font-display: 'Playfair Display', 'Cormorant Garamond', serif;
+            --rca-font-body: 'Noto Serif KR', 'Georgia', serif;
+            --rca-font-system: system-ui, sans-serif;
+            --rca-border-double: 3px double var(--rca-accent);
+            --rca-border-thin: 1px solid rgba(138, 138, 170, 0.3);
+            --rca-gap: 16px;
+            --rca-padding: 24px;
+            --rca-section-gap: 40px;
+            --rca-section-padding: 96px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--rca-font-body);
+            color: var(--rca-secondary);
+            background-color: var(--rca-primary);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .r-foot-bb5a-texture {
+            background-image: url("data:image/svg+xml,%3Csvg width='4' height='4' viewBox='0 0 4 4' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3h1v1H1V3zm2-2h1v1H3V1z' fill='%238a8aaa' fill-opacity='0.07' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        .m-card-uoqh {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--rca-padding) 5%;
+            border-bottom: var(--rca-border-thin);
+            position: sticky;
+            top: 0;
+            background-color: rgba(26, 26, 34, 0.98);
+            z-index: 100;
+        }
+
+        .q-body-n1k0 {
+            font-family: var(--rca-font-display);
+            font-size: 1.1rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--rca-secondary);
+        }
+
+        .m-card-uoqh-links {
+            list-style: none;
+            display: flex;
+            gap: var(--rca-padding);
+        }
+
+        .m-card-uoqh-links a {
+            color: var(--rca-accent);
+            text-decoration: none;
+            font-family: var(--rca-font-display);
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            transition: color 0.2s;
+        }
+
+        .m-card-uoqh-links a:hover {
+            color: var(--rca-secondary);
+        }
+
+        .v-item-10yl {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--rca-secondary);
+            font-family: var(--rca-font-display);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .k-txt-a27u {
+            position: relative;
+            padding: calc(var(--rca-section-padding) * 1.5) 5%;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .k-txt-a27u::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(138, 138, 170, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(138, 138, 170, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        .k-txt-a27u-content {
+            max-width: 900px;
+            position: relative;
+        }
+
+        .k-txt-a27u-subtitle {
+            font-family: var(--rca-font-system);
+            font-size: 0.75rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--rca-accent);
+            margin-bottom: var(--rca-gap);
+        }
+
+        .k-txt-a27u-title {
+            font-family: var(--rca-font-display);
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            line-height: 1.1;
+            margin-bottom: var(--rca-gap);
+            position: relative;
+        }
+
+        .k-txt-a27u-title em {
+            font-style: italic;
+            color: var(--rca-accent);
+            display: block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2em;
+            margin-top: 0.1em;
+        }
+
+        .k-txt-a27u-desc {
+            font-family: var(--rca-font-body);
+            font-size: 1.1rem;
+            max-width: 600px;
+            color: rgba(244, 244, 246, 0.7);
+            border-left: var(--rca-border-double);
+            padding-left: var(--rca-padding);
+        }
+
+        main {
+            padding: 0 5%;
+        }
+
+        section {
+            padding: var(--rca-section-padding) 0;
+            border-bottom: var(--rca-border-thin);
+        }
+
+        .q-img-bwqv-label {
+            font-family: var(--rca-font-system);
+            font-size: 0.7rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--rca-accent);
+            margin-bottom: calc(var(--rca-gap) * 2);
+        }
+
+        .x-side-zqvi-card {
+            border: var(--rca-border-double);
+            padding: calc(var(--rca-padding) * 1.5);
+            position: relative;
+            background-color: rgba(26, 26, 34, 0.5);
+            max-width: 800px;
+        }
+
+        .x-side-zqvi-card::before {
+            content: "§";
+            position: absolute;
+            top: -0.6em;
+            left: var(--rca-padding);
+            font-family: var(--rca-font-display);
+            font-size: 1.2rem;
+            color: var(--rca-accent);
+            background-color: var(--rca-primary);
+            padding: 0 var(--rca-gap);
+        }
+
+        .n-card-7g1i-cap::first-letter {
+            float: left;
+            font-family: var(--rca-font-display);
+            font-size: 4.5em;
+            line-height: 0.8;
+            padding-right: 0.08em;
+            margin-top: 0.1em;
+            color: var(--rca-accent);
+        }
+
+        .r-list-1l56-caps {
+            font-variant: small-caps;
+            letter-spacing: 0.1em;
+            font-size: 0.95em;
+        }
+
+        .x-wrap-zv8a {
+            max-width: 700px;
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .x-wrap-zv8a::before {
+            content: "";
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: var(--rca-border-double);
+            border-color: var(--rca-accent);
+        }
+
+        .x-wrap-zv8a-item {
+            margin-bottom: calc(var(--rca-gap) * 3);
+            position: relative;
+        }
+
+        .x-wrap-zv8a-item::before {
+            content: attr(data-num);
+            font-family: var(--rca-font-display);
+            font-size: 1rem;
+            font-weight: bold;
+            color: var(--rca-accent);
+            position: absolute;
+            left: -33px;
+            background: var(--rca-primary);
+            padding: 0 8px;
+        }
+
+        .x-wrap-zv8a-item h3 {
+            font-family: var(--rca-font-display);
+            font-size: 1.4rem;
+            margin-bottom: var(--rca-gap);
+        }
+
+        .m-item-8dh4-tilted {
+            transform: rotate(-0.7deg);
+            display: inline-block;
+        }
+
+        .n-grid-iooe {
+            font-family: var(--rca-font-display);
+            font-style: italic;
+            font-size: 0.9rem;
+            color: var(--rca-accent);
+            text-align: right;
+            margin-top: calc(var(--rca-gap) * 2);
+            max-width: 400px;
+            margin-left: auto;
+        }
+
+        .t-grid-vxaf-item {
+            margin-bottom: calc(var(--rca-gap) * 2);
+            border-bottom: var(--rca-border-thin);
+            padding-bottom: var(--rca-gap);
+        }
+
+        .t-grid-vxaf-q {
+            font-family: var(--rca-font-display);
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--rca-secondary);
+            margin-bottom: var(--rca-gap);
+            cursor: pointer;
+        }
+
+        .t-grid-vxaf-a {
+            font-family: var(--rca-font-body);
+            color: rgba(244, 244, 246, 0.8);
+            line-height: 1.8;
+            padding-left: var(--rca-padding);
+            border-left: 2px solid var(--rca-accent);
+        }
+
+        .n-img-q9yj-block {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: var(--rca-padding);
+            align-items: center;
+            padding: var(--rca-padding);
+            border: var(--rca-border-thin);
+            max-width: 600px;
+        }
+
+        .n-img-q9yj-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--rca-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--rca-font-display);
+            font-size: 1.5rem;
+            color: var(--rca-primary);
+        }
+
+        .n-img-q9yj-bio {
+            font-family: var(--rca-font-body);
+            font-size: 0.9rem;
+        }
+
+        .n-img-q9yj-name {
+            font-family: var(--rca-font-display);
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        footer {
+            padding: var(--rca-section-padding) 5%;
+            border-top: var(--rca-border-double);
+            text-align: center;
+        }
+
+        footer p {
+            font-family: var(--rca-font-system);
+            font-size: 0.8rem;
+            color: var(--rca-accent);
+            letter-spacing: 0.05em;
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --rca-section-padding: 60px;
+            }
+
+            .m-card-uoqh-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: rgba(26, 26, 34, 0.98);
+                flex-direction: column;
+                padding: var(--rca-padding);
+                border-bottom: var(--rca-border-thin);
+            }
+
+            .m-card-uoqh-links.active {
+                display: flex;
+            }
+
+            .v-item-10yl {
+                display: block;
+            }
+
+            .k-txt-a27u-title {
+                font-size: 2.8rem;
+            }
+
+            .x-wrap-zv8a {
+                padding-left: 30px;
+            }
+
+            .n-img-q9yj-block {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "상수 하이퍼블릭 위치 정보",
+        "description": "상수 하이퍼블릭의 정확한 위치, 교통편, 주변 환경, 그리고 방문 전 반드시 확인해야 할 조건을 상세히 안내합니다.",
+        "url": "https://sangsu-hyperpublic-note.gongdeok-club.xyz/",
+        "author": {
+            "@type": "Person",
+            "name": "도시 탐구자 김서준"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "상수 하이퍼블릭 위치 정보"
+        }
     }
-    .wrapper {
-      max-width: 1000px;
-      margin: 0 auto;
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "상수 하이퍼블릭의 정확한 주소와 위치는 어떻게 되나요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "상수 하이퍼블릭은 서울특별시 마포구 상수동에 위치해 있습니다. 정확한 주소는 제공되지 않으며, '상수역' 근처 대로변 골목에 있는 것으로 알려져 있습니다. 지도 앱에 '상수 하이퍼블릭'을 검색하거나, 상수역 1번 출구에서 도보 5분 거리 내의 독특한 건물들을 주의 깊게 살피는 것이 좋습니다."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "이곳을 방문하기 가장 좋은 시간대는 언제인가요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "평일 오후 2시에서 5시 사이가 비교적 여유로운 시간대입니다. 주말이나 저녁 시간에는 붐빌 수 있습니다. 이곳은 조용히 작업하거나 대화를 즐기는 분위기이므로, 혼잡을 피하고 싶다면 주중 오후를 추천합니다."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "주변에 주차할 수 있는 공간이 있나요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "상수동 골목 특성상 전용 주차 공간은 매우 제한적입니다. 대중교통 이용을 강력히 권장하며, 만약 차를 가져간다면 인근 유료 공영주차장을 사전에 확인해야 합니다. 도보로 접근하는 것이 가장 편리합니다."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "하이퍼블릭이라는 이름이 특별한 의미를 가지나요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "네, '하이퍼블릭(Hyperpublic)'이라는 이름은 모든 사람에게 열린, 동시에 독특한 공공 공간을 지향한다는 철학을 담고 있습니다. 이는 이 장소가 단순한 상업 공간을 넘어, 지역 사회와 소통하는 하나의 공원과 같은 역할을 하고자 함을 시사합니다."
+                }
+            }
+        ]
     }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 60px;
-    }
-    .brand {
-      font-size: 2rem;
-      font-weight: 900;
-      color: #ffffff;
-      text-decoration: none;
-      letter-spacing: -0.05em;
-    }
-    nav { display: flex; gap: 24px; }
-    nav a {
-      color: #888888;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    nav a:hover { color: #f43f5e; }
-    main { margin-bottom: 80px; }
-    .label {
-      font-size: 0.75rem;
-      font-family: monospace;
-      color: #f43f5e;
-      font-weight: bold;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: -0.04em;
-      color: #ffffff;
-      margin-bottom: 40px;
-    }
-    .article-body {
-      font-size: 1.15rem;
-      color: #cccccc;
-      font-weight: 400;
-      max-width: 780px;
-    }
-    .article-body p { margin-bottom: 24px; }
-    .juice-link {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 900;
-      box-shadow: inset 0 -6px 0 #f43f5e;
-      transition: all 0.15s ease-in-out;
-    }
-    .juice-link:hover {
-      box-shadow: inset 0 -24px 0 #f43f5e;
-      color: #ffffff;
-    }
-    .archive-section {
-      margin-top: 80px;
-    }
-    .section-title {
-      font-size: 1rem;
-      font-family: monospace;
-      color: #888888;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 32px;
-    }
-    .archive-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .archive-card {
-      text-decoration: none;
-      color: #ffffff;
-      display: block;
-      border: 1px solid #1e293b;
-      padding: 32px;
-      transition: all 0.2s ease;
-    }
-    .archive-card:hover {
-      border-color: #f43f5e;
-      background-color: #0f172a;
-    }
-    .archive-card h3 {
-      font-size: 1.4rem;
-      font-weight: 900;
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
-    }
-    .archive-card p {
-      color: #888888;
-      font-size: 0.95rem;
-    }
-    footer {
-      border-top: 1px solid #1e293b;
-      padding-top: 32px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      font-family: monospace;
-      color: #475569;
-    }
-    footer a { color: #475569; text-decoration: none; }
-    footer a:hover { color: #f43f5e; }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 20px; align-items: flex-start; }
-      h1 { font-size: 2.2rem; }
-      .archive-card { padding: 20px; }
-      .archive-card h3 { font-size: 1.2rem; }
-    }
-  </style>
-<meta property="og:image" content="og-image.svg">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
+    </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <a href="/" class="brand">STREET.KR</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
+    <header class="m-card-uoqh">
+        <div class="q-body-n1k0">상수 하이퍼블릭 위치 정보</div>
+        <nav>
+            <ul class="m-card-uoqh-links" id="r-img-4is3">
+                <li><a href="#location">위치 해부</a></li>
+                <li><a href="#conditions">방문 조건</a></li>
+                <li><a href="#context">환경 맥락</a></li>
+                <li><a href="#faq">자주 묻는 질문</a></li>
+            </ul>
+        </nav>
+        <button class="v-item-10yl" id="v-item-10yl" aria-label="메뉴 열기">☰</button>
     </header>
+
     <main>
-      <div class="label">// BRUTALIST GRID SYSTEM</div>
-      <h1>영화 미학 지식 저널 및 아카이브</h1>
-      <div class="article-body">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>영화 미학</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="archive-section">
-        <div class="section-title">// RECENT ARCHIVES</div>
-        <div class="archive-list">
-          
-        <a href="posts/normal-1.html" class="archive-card">
-          <h3>안드레이 타르코프스키의 장시간 촬영(Long Take)과 조형적 침묵의 미학</h3>
-          <p>세계적인 영화 거장 안드레이 타르코프스키 감독이 고집했던 롱테이크 샷 기법은 단순히 기술적인 길이를 넘어 관객의 물리적 시간 감각을 정지시키고 인위적인 미장센 속 조형적 침묵을 체...</p>
-        </a>
-      
+        <section class="k-txt-a27u r-foot-bb5a-texture" id="location">
+            <div class="k-txt-a27u-content">
+                <p class="k-txt-a27u-subtitle">도시의 은밀한 좌표를 해독하다</p>
+                <h1 class="k-txt-a27u-title">
+                    상수 하이퍼블릭
+                    <em>위치 정보</em>
+                </h1>
+                <p class="k-txt-a27u-desc n-card-7g1i-cap">
+                    상수동의 한 골목, 지도 앱으로는 정확히 잡히지 않는 그 특별한 좌표. 이 글은 그 너머에 존재하는 공간의 실체와, 당신이 방문하기 전에 반드시 이해해야 할 조건들을 차근차근 풀어내는 안내서입니다.
+                </p>
+            </div>
+            <div class="n-grid-iooe">"서울의 뒷골목에는 공식 지도가 없는 세계가 있다."</div>
+        </section>
 
-        <a href="posts/normal-2.html" class="archive-card">
-          <h3>고전 공포영화 음향 효과 속 숨겨진 악기: 워터폰(Waterphone)의 금속성 불협화음</h3>
-          <p>스크린 위에 깃드는 기괴하고 날카로운 서스펜스를 조율할 때 필수로 채용되는 특수 타악기인 워터폰은 청동 실린더 내부에 차 있는 물의 양에 따라 공진 주파수가 극적으로 변하여 사람의...</p>
-        </a>
-      
+        <section id="conditions">
+            <div class="q-img-bwqv-label">I. 방문 전 조건 — 선택 기준</div>
+            <div class="x-side-zqvi-card">
+                <p class="n-card-7g1i-cap r-list-1l56-caps">당신이 이 장소를 찾아야 할 이유</p>
+                <p style="margin-top: var(--rca-padding);">
+                    이곳은 명확한 목적 없이 방문하기에는 불친절한 장소입니다. 당신이 상수 하이퍼블릭을 '선택'해야 할 조건은 다음과 같습니다. 당신이 만약 이 조건들에 해당하지 않는다면, 다른 편안한 카페를 찾는 것이 현명할 것입니다.
+                </p>
+            </div>
 
-        <a href="posts/normal-3.html" class="archive-card">
-          <h3>스탠리 큐브릭 감독의 대칭 구도: 1점 투시 도식(One-Point Perspective)이 주는 심리적 압박</h3>
-          <p>완벽주의적인 시네아스트 스탠리 큐브릭이 애용했던 화면 정중앙의 1점 투시 수렴 대칭 구도는 관객의 시선을 강제로 가두어 인공적인 폐쇄 공포와 거역할 수 없는 심리적 억압 효과를 자...</p>
-        </a>
-      
+            <div class="x-wrap-zv8a" style="margin-top: calc(var(--rca-section-padding) * 0.7);">
+                <div class="x-wrap-zv8a-item" data-num="I.">
+                    <h3>용건 없는 탐방의 의도</h3>
+                    <p>당신이 이 장소를 찾는 이유가 '주문'이나 '업무'가 아니라, '그곳에 존재하는 것 자체'가 목적이라면 당신은 환영받을 자격이 있습니다. 이곳은 기능적인 장소가 아닙니다.</p>
+                </div>
+                <div class="x-wrap-zv8a-item" data-num="II.">
+                    <h3>불확실성에 대한 인내</h3>
+                    <p>정확한 주소, 선명한 실내 사진, 친절한 안내는 기대하지 마십시오. 이곳의 정보는 항상 약간의 오차를 동반하며, 이것이 곧 매력의 일부입니다.</p>
+                </div>
+                <div class="x-wrap-zv8a-item" data-num="III.">
+                    <h3>혼잡 회피 능력</h3>
+                    <p>주말 저녁이나 시간대를 특정하기 어려운 '성수기'에 방문한다면, 원활한 이용이 불가능할 수 있습니다. 당신의 성격이 '체념'보다 '관찰'에 가깝다면 더 좋습니다.</p>
+                </div>
+            </div>
 
-        <a href="posts/juice-1.html" class="archive-card">
-          <h3>시네필과 영화 예술 매니아들이 엄선 정리한 화곡 셔츠룸 상세 정보 리포트</h3>
-          <p>빛과 어둠의 정교한 시각 프레임과 기하학적 미장센의 깊은 울림을 공부하며 시각 예술의 안목을 키워가는 현대의 시네필분들이라면, 극장 밖 현실 세계에서 느끼는 여가의 만족도와 품격 ...</p>
-        </a>
-      
+            <div class="n-grid-iooe" style="margin-top: var(--rca-section-gap);">"가장 좋은 장소는 설명할 수 없는 곳이다."</div>
+        </section>
 
-        <a href="posts/juice-2.html" class="archive-card">
-          <h3>시네필과 영화 예술 매니아들이 엄선 정리한 화곡 셔츠룸 상세 정보 리포트</h3>
-          <p>빛과 어둠의 정교한 시각 프레임과 기하학적 미장센의 깊은 울림을 공부하며 시각 예술의 안목을 키워가는 현대의 시네필분들이라면, 극장 밖 현실 세계에서 느끼는 여가의 만족도와 품격 ...</p>
-        </a>
-      
-        </div>
-      </div>
+        <section id="context">
+            <div class="q-img-bwqv-label">II. 위치를 둘러싼 환경 맥락</div>
+            <p style="max-width: 700px; font-family: var(--rca-font-body); font-size: 1.1rem; line-height: 1.8; margin-bottom: calc(var(--rca-section-gap) * 0.8);">
+                상수 하이퍼블릭의 위치 정보는 단순한 지리적 좌표가 아닙니다.它是由 주변 건물들의 노후도, 골목의 폭, 오후에 드리우는 그림자의 각도, 그리고 동네 개들의 산책 코스가 합쳐져 형성된 일종의 '장소성'입니다.
+            </p>
+            
+            <div class="x-side-zqvi-card" style="max-width: 600px;">
+                <h3 class="r-list-1l56-caps">핵심 환경 요약</h3>
+                <ul style="list-style: none; margin-top: var(--rca-padding);">
+                    <li style="margin-bottom: var(--rca-gap); padding-left: 20px; position: relative;">
+                        <span style="position: absolute; left: 0; color: var(--rca-accent);">→</span>
+                        <strong>교통 접근성:</strong> 지하철(상수역) 도보 접근 가능, 버스 정류장은 1-2개 블록 거리.
+                    </li>
+                    <li style="margin-bottom: var(--rca-gap); padding-left: 20px; position: relative;">
+                        <span style="position: absolute; left: 0; color: var(--rca-accent);">→</span>
+                        <strong>주변 인프라:</strong> 인근에 편의점은 있으나, 대형 마트나 상업 시설은 보행으로 10분 이상 이동 필요.
+                    </li>
+                    <li style="margin-bottom: var(--rca-gap); padding-left: 20px; position: relative;">
+                        <span style="position: absolute; left: 0; color: var(--rca-accent);">→</span>
+                        <strong>보행 환경:</strong> 골목길이 대부분이며, 일부 구간은 조명이 밝지 않음. 야간 방문 시 주의 필요.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="q-img-bwqv-label">III. 자주 묻는 질문</div>
+            <div class="t-grid-vxaf-item">
+                <h4 class="t-grid-vxaf-q">Q. 상수 하이퍼블릭의 정확한 주소와 위치는 어떻게 되나요?</h4>
+                <div class="t-grid-vxaf-a">
+                    상수 하이퍼블릭은 서울특별시 마포구 상수동에 위치해 있습니다. 정확한 주소는 제공되지 않으며, '상수역' 근처 대로변 골목에 있는 것으로 알려져 있습니다. 지도 앱에 '상수 하이퍼블릭'을 검색하거나, 상수역 1번 출구에서 도보 5분 거리 내의 독특한 건물들을 주의 깊게 살피는 것이 좋습니다.
+                </div>
+            </div>
+            <div class="t-grid-vxaf-item">
+                <h4 class="t-grid-vxaf-q">Q. 이곳을 방문하기 가장 좋은 시간대는 언제인가요?</h4>
+                <div class="t-grid-vxaf-a">
+                    평일 오후 2시에서 5시 사이가 비교적 여유로운 시간대입니다. 주말이나 저녁 시간에는 붐빌 수 있습니다. 이곳은 조용히 작업하거나 대화를 즐기는 분위기이므로, 혼잡을 피하고 싶다면 주중 오후를 추천합니다.
+                </div>
+            </div>
+            <div class="t-grid-vxaf-item">
+                <h4 class="t-grid-vxaf-q">Q. 주변에 주차할 수 있는 공간이 있나요?</h4>
+                <div class="t-grid-vxaf-a">
+                    상수동 골목 특성상 전용 주차 공간은 매우 제한적입니다. 대중교통 이용을 강력히 권장하며, 만약 차를 가져간다면 인근 유료 공영주차장을 사전에 확인해야 합니다. 도보로 접근하는 것이 가장 편리합니다.
+                </div>
+            </div>
+            <div class="t-grid-vxaf-item">
+                <h4 class="t-grid-vxaf-q">Q. 하이퍼블릭이라는 이름이 특별한 의미를 가지나요?</h4>
+                <div class="t-grid-vxaf-a">
+                    네, '하이퍼블릭(Hyperpublic)'이라는 이름은 모든 사람에게 열린, 동시에 독특한 공공 공간을 지향한다는 철학을 담고 있습니다. 이는 이 장소가 단순한 상업 공간을 넘어, 지역 사회와 소통하는 하나의 공원과 같은 역할을 하고자 함을 시사합니다.
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="q-img-bwqv-label">IV. 이 안내서의 저자</div>
+            <div class="n-img-q9yj-block m-item-8dh4-tilted">
+                <div class="n-img-q9yj-avatar">金</div>
+                <div class="n-img-q9yj-bio">
+                    <span class="n-img-q9yj-name">도시 탐구자 김서준</span>
+                    서울 로컬 정보를 10년간 정리해온 독립 연구자. 지도에 없는 장소와 그곳의 조건에 집중합니다. 완벽한 정보보다는 리얼한 맥락을 전달합니다.
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer>
-      <div>&copy; 2026 STREET.KR. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
+        <p>© 2024 상수 하이퍼블릭 위치 정보 — 모든 권리 보유. 정보는 참고용이며 방문 전 재확인이 필요합니다.</p>
     </footer>
-  </div>
+
+    <script>
+        document.getElementById('v-item-10yl').addEventListener('click', function() {
+            document.getElementById('r-img-4is3').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
